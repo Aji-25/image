@@ -18,6 +18,7 @@ import cross_icon from './cross_icon.svg'
 import star_group from './star_group.png'
 import credit_star from './credit_star.svg'
 import profile_icon from './profile_icon.png'
+import profile_img_3 from './profile_img_3.jpg'
 
 export const assets = {
     logo,
@@ -67,15 +68,15 @@ export const testimonialsData = [
         image:profile_img_2,
         name:'Richard Nelson',
         role:'Content Creator',
-        stars:5,
+        stars:4,
         text:`I've been using bg.removal for nearly two years, primarily for Instagram, and it has been incredibly user-friendly, making my work much easier.`
     },
     {
-        image:profile_img_1,
-        name:'Donald Jackman',
-        role:' Graphic Designer',
-        stars:5,
-        text:`I've been using bg.removal for nearly two years, primarily for Instagram, and it has been incredibly user-friendly, making my work much easier.`
+        image:profile_img_3,
+        name:'Sofia Patel',
+        role:'UI/UX Designer',
+        stars:4,
+        text:`This is hands down the cleanest AI image generation interface Ive used. The prompt responsiveness is amazing, and the image quality is sharp.`
     },
 ]
 
