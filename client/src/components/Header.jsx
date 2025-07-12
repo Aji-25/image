@@ -1,7 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
 import { assets } from "../assets/assets";
+import { AppContext } from "../context/AppContext";
+import { Navigate, useNavigate } from "react-router-dom";
+
 
 export default function Header() {
+    const {user, setShowLogin} = useContext(AppContext);
+    const navigate = useNavigate();
+    function handleClick(){
+        if(user){
+            navigate('/result');
+        }
+        else{
+            setShowLogin(true)
+        }
+    }
     return (
         <div className="flex flex-col justify-center items-center text-center my-20">
             <div className="text-stone-500 inline-flex text-center gap-2 bg-white px-6 py-1 rounded-full border border-neutral-500">
@@ -10,7 +23,7 @@ export default function Header() {
             </div>
             <h1 className="text-4xl max-w-[600px] sm:text-7xl sm:max-w-[590] mx-auto mt-10 text-center">Turn text to <span className="text-blue-600">image</span>, in seconds.</h1>
             <p className="text-center mx-auto max-w-xl mt-5">Unleash your creativity with AI. Turn your imagination into visual art in seconds - just type, and watch the magic happen.</p>
-            <button className="flex items-center text-white bg-black w-auto mt-8 px-12 py-2.5 gap-2 rounded-full">
+            <button onClick={handleClick} className="inline-flex items-center gap-2 px-12 py-3 rounded-full mt-10 bg-black text-white m-auto hover:scale-105 transition-all duration-500">
                 Generate Images
                 <img className='h-6'src={assets.star_group} />
             </button>
